@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BGAN Color Extractooor</title>
+  <style>
+    @keyframes colorChange {
+      0% {
+        color: red; /* Change to the starting color */
+      }
+      50% {
+        color: green; /* Change to the middle color */
+      }
+      100% {
+        color: blue; /* Change to the ending color */
+      }
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    #imageContainer {
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+      border: 1px solid #FFFFFF;
+    }
+    #imagePreview {
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+    }
+    .colorSquare {
+      width: 30px;
+      height: 30px;
+      margin: 20px;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .colorSquare span {
+      margin-top: 60px; /* Adjust the margin as desired to create space between color box and hex code */
+    }
+    h1 {
+      animation: colorChange 3s infinite; /* Apply the animation to the h1 element */
+    }
+  </style>
+</head>
+<body>
+  <h1>BGAN Color Extractooor</h1>
+  <input type="file" id="imageInput" accept="image/*">
+  <div id="imageContainer">
+    <img id="imagePreview">
+  </div>
+  <div id="colorsContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
